@@ -12,17 +12,32 @@ class CustomerRepository
 
     protected $customerTable;
 
-    public function __construct()
-    {
-        $this->customerTable = new TableGateway(
-            'customers',
-            new Adapter(array(
-                'driver' => 'Pdo_Sqlite',
-                'database' => APPLICATION_PATH . '/data/sqlite.db'
-            )
-        ));
-    }
+ public function __construct()
 
+    {       
+
+    	$miarreglo=array(
+
+    			'driver' => 'Pdo_Mysql',
+
+    			'dsn'            => 'mysql:dbname=entegra;host=entegra-db',
+
+    			'username'  => 'entegra',
+
+    			'password'  => 'Trinity33',);
+
+    	 
+
+        $this->customerTable = new TableGateway(
+
+        		'customers',
+
+        		new Adapter($miarreglo
+
+        		));
+
+    }
+    
     public function add($name, $location, $activity = '', $phone = '')
     {
         $inserted = $this->customerTable->insert(array(

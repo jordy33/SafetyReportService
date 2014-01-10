@@ -1,4 +1,7 @@
+LaunchURL=http\://server/folder
 Save\ Mode=ON_SAVE
+SelectedHostGUID=52a14ca2-9bef-4e41-b631-78bac24b04ff
+UploadFolder=.apps/http/__default__/0/SafetyReportService/1.0.0
 eclipse.preferences.version=1
 isLocalProjectEnabled=false
-isRemoteProjectEnabled=false
+isRemoteProjectEnabled=true
